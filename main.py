@@ -3,6 +3,8 @@ import pyttsx3
 
 listener = sr.Recognizer()
 engine = pyttsx3.init()
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id)
 engine.say('Eu sou a Alexa')
 engine.say('Em que posso te ajudar?')
 engine.runAndWait()
